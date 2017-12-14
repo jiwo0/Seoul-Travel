@@ -1,0 +1,273 @@
+/* font settings ------------------------*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+/* Smartphones ------------------------ */
+
+@media only screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    height: 300px;
+  }
+  footer {
+    width: 480px;
+    height: auto;
+  }
+  .course {
+    clear: both;
+  }
+  figure {
+    width: 300px 100%;
+    height: 200px 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  figure .image {
+    width: 200px;
+  }
+}
+
+
+/* Tablets ----------------------------- */
+
+@media only screen and (min-width: 481px) {
+  header {
+    width: 100%;
+    height: 600px;
+  }
+  footer {
+    width: 780px;
+    height: 200px;
+  }
+}
+
+
+/* Desktops --------------------------- */
+
+@media only screen and (min-width: 1440px) {
+  header {
+    width: 100%;
+    height: 700px;
+  }
+  footer {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* --- dafault settings--- */
+body {
+  margin: 0;
+  font-family: 'Nanum Myeongjo', arial, verdana, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nanum Myeongjo', serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  height: 35px;
+  margin: 20px 0px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  float: right;
+  margin-right: 5px;
+  padding: 0px 20px;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+/* ---- header start ---- */
+#logo {
+  font-size: 15px;
+  font-family: 'Nanum Myeongjo';
+  position: relative;
+  top: 5%;
+  float: left;
+  display: inline;
+  margin-left: 3%;
+}
+
+header {
+  position: relative;
+  background-image: url('./src/header-background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+}
+
+header>h1 {
+  font-size: 300%;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-shadow: 0.01em 0.01em 0.5em #fff;
+}
+
+/* article1 start*/
+.article1 {
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  top: auto;
+}
+
+.article1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* article2 start*/
+.article2 {
+  position: inherit;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.course {
+  float: left;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url('./src/course-icon.png');
+  width: 150px;
+  height: 130px;
+  align-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin: 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.article2 a {
+  color: #000;
+  margin-top: 10%;
+  width: 100%;
+}
+
+/* article3 start */
+.article3 {
+  margin-top: 10%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure.image {
+  position: relative;
+  float: left;
+  margin: 5%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+figure.image img {
+  width: 500px;
+  height: 400px;
+}
+
+figure.image:after, figure.image figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+figure.image figcaption {
+  z-index: 1;
+  padding: 40px;
+}
+
+figure.image h3 {
+  color: #1e1e1e;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+figure.image p {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+  color: #000;
+}
+
+figure.image a {
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  right: auto;
+  z-index: 1;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+
+figure.image:hover img, figure.image.hover img {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+
+figure.image:hover:after, figure.image.hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+figure.image:hover h3, figure.image.hover h3, figure.image:hover p, figure.image.hover p, figure.image:hover i, figure.image.hover i {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+/*----- footer start-----*/
+footer {
+  background-image: url('./src/footer-background.png');
+  background-repeat: no-repeat;
+  color: white;
+}
+
+footer #copyright {
+  position: relative;
+  top: 100px;
+  left: 0px;
+  font-size: 12pt;
+  text-align: left;
+}
