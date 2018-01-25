@@ -3,114 +3,180 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 */
-/* Smartphones ------------------------ */
-
-@media only screen and (max-width: 480px) {
-
-}
-
-
-/* Tablets ----------------------------- */
-
-@media only screen and (min-width: 481px) {
-
-}
-
-
-/* Desktops --------------------------- */
-
-@media only screen and (min-width: 1440px) {
-
-}
-
 
 /* --- dafault settings--- */
+@charset "utf-8";
+/*
+ * default style definition
+ */
 
+html{
+  width: 100%; height: 100%;
+  overflow: hidden;
+  position: relative;
+}
 body {
+  width: 100%; height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  perspective: 2.1px;
   margin: 0;
-
+  padding: 0;
+  font-size: 75%;
+  line-height: 1.5em;
+  font-family: "Malgun Gothic", "Lucida Grande", Tahoma, Verdana, AppleGothic, UnDotum, sans-serif;
 }
-
-h1, h2, h3, h4, h5, h6 {
-
+form {
+  margin: 0;
+  padding: 0;
 }
-
-a {
+hr {
+  display: none;
+}
+p, div, th, td, select, input {
+  color: #333;
+}
+a:link, a:visited {
+  color: #666;
   text-decoration: none;
-
 }
-
-ul {
-  list-style: none;
+a:active, a:hover {
+  color: #000;
+  text-decoration: none;
 }
-
-nav {
-
+a img, 
+input.type-image {
+  border: 0 none;
 }
-
-nav li {
-
+input.type-text, 
+textarea {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 1px;
 }
-
-nav li a {
-
+input.type-text:hover, 
+input.type-text:focus, 
+textarea:hover, 
+textarea:focus, 
+select:hover, 
+select:active {
+  background-color: #ffd;
+}
+input, select, textarea {
+  vertical-align: middle;
+  font-size: 1em;
+  color: #333;
+}
+select {
+  font-size: 11px;
+  font-family: Dotum, "돋움", sans-serif;
+}
+span.button, 
+img.button, 
+a.button {
+  cursor: pointer;
+  vertical-align: middle;
 }
 
 
 /* ---- header start ---- */
-
-#logo {
-  background-image: url(../Resource/src/seoulLogo.png);
+header{
+  width: 100%;
+  height: 1178px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-header {
-
+header > nav {
+  position: relative;
+  background: #f9f9f9;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
 }
 
-header > a {
-
+header > nav > a {
+  float: left;
+  font-size: 12pt;
+  letter-spacing : 0.5em;
+  width: 33.3333%;
+  height: 70px;
+ line-height: 70px;
 }
-header > a:hover{
 
+
+header > .header-img{
+  z-index: -1;
+  position: relative;
+/*  width: 100%;
+  height: 75%;*/
+width : 100%; height: 1000px;
+
+  padding-top : calc (300 / 1000 * 100 %); / * calc (이미지 높이 ÷ 이미지 가로 × 100 %) * /
+}
+header > .header-img > .bg{
+  width: 100%;   height: 1000px;
+  min-height: 100px;
+  background: url(../Resource/src/background.jpg) center center / cover no-repeat;
+  position: absolute;
+  top: 0px; left: 0px;
+  overflow:hidden;
+  transform:translateZ(-1px) scale(1.5,1.5);
+}
+header > .header-img > .bg:before{
+    width: 100%;   height: 1000px;
+  content: '';
+  display: block;
+  background: url(../Resource/src/background.jpg) center center / cover no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
+header > .header-img > .con {
+  position: relative; z-index: 5;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  padding-top: 100px;
+  border-radius: 50%; background-color: rgba(0,0,0,0.5);
+}
+header > .header-img > .con > p{
+  color: #fff;
+}
 
 /* article1 start*/
 
-.article1 {
+.a1 {
 
 }
 
-.article1 img {
+.a1 img {
 
 }
 
 
 /* article2 start*/
 
-.article2 {
+.a2 {
 
 }
 
 .course {
+  position: relative;
   width: 100px;
   height: 100px;
-  overflow-wrap: hidden;
   background: linear-gradient(to bottom , #fcf3c1, #faa0a0);
   border-radius: 50%;
 
   float: left;
   position: relative;
-
-  align-content: center;
-
   text-align: center;
-  line-height: 100px;
   margin: 4%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+/*  overflow: hidden;*/
 }
 
 
@@ -121,7 +187,9 @@ header > a:hover{
 }
 
 figure.image {
-
+  width: 550px;
+  height: 350px;
+  overflow: hidden;
 }
 
 figure.image img {
@@ -176,3 +244,32 @@ footer #copyright {
   font-size: 12pt;
   text-align: left;
 }
+/* Smartphones ------------------------ */
+
+@media only screen and (max-width: 769px) {
+header > .header-img{
+  z-index: -1;
+  position: relative;
+  width: 100%;
+/*  height: 20%;*/
+}
+}
+
+
+/* Tablets ----------------------------- */
+
+@media only screen and (min-width: 770px) and (max-width: 1439px) {
+header > .header-img{
+  z-index: -1;
+  position: relative;
+  width: 100%;
+/*  height: 50%;*/
+}
+}
+
+/* Desktops --------------------------- */
+
+@media only screen and (min-width: 1440px) {
+
+}
+
