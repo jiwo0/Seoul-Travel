@@ -1,5 +1,5 @@
 
-/* --- dafault settings--- */
+/* --- font settings--- */
 @font-face {
  font-family: 'NanumBarunGothic';
  font-style: normal;
@@ -23,6 +23,7 @@
  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
 }
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
 
 @charset "utf-8";
 
@@ -95,10 +96,6 @@ input, select, textarea {
   color: #333;
 }
 
-select {
-  font-size: 11px;
-  font-family: "돋움", sans-serif;
-}
 
 span.button, img.button, a.button {
   cursor: pointer;
@@ -115,6 +112,7 @@ span.button, img.button, a.button {
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: 'NanumSquare', sans-serif;
   }
 
     header>nav {
@@ -128,11 +126,11 @@ span.button, img.button, a.button {
 
       header>nav>a {
         float: left;
-        font-size: 80%;
         letter-spacing: 0.5em;
         width: 33.3333%;
         height: 70px;
         line-height: 70px;
+        font-weight: 500;
       }
 
     header>.header-img {
@@ -176,10 +174,11 @@ span.button, img.button, a.button {
 /* article1 start*/
   .title
   {
+    font-family: 'nanumsquare',sans-serif;
     margin: 0;
     margin-top: 5%;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     letter-spacing: 1em;
   }
