@@ -246,7 +246,7 @@ span.button, img.button, a.button {
   float: left;
   position: relative;
   text-align: center;
-  margin: 4%;
+  margin: 2.5%;
   display: flex;
   flex-direction: column;
     overflow: hidden;
@@ -405,6 +405,7 @@ footer > span{
   }
   .course{
     width: 12vw; height: 12vw;
+    margin: 5%;
   }
   .coursesline{
     width: 70%;
