@@ -160,6 +160,7 @@ span.button, img.button, a.button {
         z-index: 3;
         opacity: 1;
         color: #fff;
+        text-shadow: 1px 1px 1.5rem rgba(0,0,0,0.5);
       }
       header>.header-img>.con > p:nth-child(1){
         font-size: 6rem;
@@ -194,6 +195,8 @@ span.button, img.button, a.button {
     width: 80%; height: 40vh;
     margin : 0 10% 10% 10%;
     background-color: #fff;
+    box-shadow: -50px 0px 150px -90px #000000,
+        50px 0px 150px -90px #000000;
 
     }
     .a1 > div{
