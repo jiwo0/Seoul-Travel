@@ -1,13 +1,28 @@
-/* font settings ------------------------*/
-
-
-/*
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-*/
-
 
 /* --- dafault settings--- */
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 700;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 300;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+}
 
 @charset "utf-8";
 
@@ -32,7 +47,9 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  font-family: "Malgun Gothic", "Lucida Grande", Tahoma, Verdana, AppleGothic, UnDotum, sans-serif;
+  font-weight: 300;
+  font-family: 'NanumBarunGothic',AppleGothic, UnDotum, sans-serif;
+  background-color: #f4f4f4;
 }
 
 form {
@@ -91,86 +108,137 @@ span.button, img.button, a.button {
 
 /* ---- header start ---- */
 
-header {
-  width: 100%;
-  padding-bottom: calc(70+ 1920 / 1108 * 100 %);
-  max-height: 1178px;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
+  header {
+    width: 100%;
+    padding-bottom: calc(70+ 1920 / 1108 * 100 %);
+    max-height: 1178px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
 
-header>nav {
-  position: relative;
-  background: #f9f9f9;
-  width: 100%;
-  height: 70px;
-  overflow: hidden;
-  text-align: center;
-}
+    header>nav {
+      position: relative;
+      background: #f9f9f9;
+      width: 100%;
+      height: 70px;
+      overflow: hidden;
+      text-align: center;
+    }
 
-header>nav>a {
-  float: left;
-  font-size: 80%;
-  letter-spacing: 0.5em;
-  width: 33.3333%;
-  height: 70px;
-  line-height: 70px;
-}
+      header>nav>a {
+        float: left;
+        font-size: 80%;
+        letter-spacing: 0.5em;
+        width: 33.3333%;
+        height: 70px;
+        line-height: 70px;
+      }
 
-header>.header-img {
-  position: relative;
-  width: 100%; max-width: 1920px;
-  margin: 0 auto;
-}
+    header>.header-img {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
 
-header>.header-img>.bg {
-  max-width: 100%; /* 이미지의 최대사이즈 */
-    width /***/: auto; /* IE8 */
-    height: auto;
-    vertical-align: bottom;
-}
+    header>.header-img>.bg {
+      max-width: 100%; /* 이미지의 최대사이즈 */
+        width /***/: auto; /* IE8 */
+        height: auto;
+    }
 
-header>.header-img>.con{
-  top: 50%; left: 50%;
-  position: absolute;
-  z-index: 2;
-  width: 50vw; height: 50vw;
-  text-align: center;
-  border-radius: 50%;
-background:linear-gradient(135deg, rgba(252, 223, 138,0.4) 0%,rgba(243, 131, 129,0.4) 100%) ;
-  transform:translate(-50%, -50%);
-}
-header>.header-img>.con>p {
-  z-index: 3;
-  opacity: 1;
-  color: #fff;
-}
-header>.header-img>.con > p:nth-child(1){
-  font-size: 6rem;
-  line-height: 6rem;
-}
-header>.header-img>.con:nth-child(2){
-font-size: 2rem;
-line-height: 2rem;
-}
+    header>.header-img>.con{
+      top: 50%; left: 50%;
+      position: absolute;
+      z-index: 2;
+      width: 50vw; height: 50vw;
+      text-align: center;
+      border-radius: 50%;
+    background:linear-gradient(135deg, rgba(252, 223, 138,0.4) 0%,rgba(243, 131, 129,0.4) 100%) ;
+      transform:translate(-50%, -50%);
+      }
+
+      header>.header-img>.con>p {
+        z-index: 3;
+        opacity: 1;
+        color: #fff;
+      }
+      header>.header-img>.con > p:nth-child(1){
+        font-size: 6rem;
+        line-height: 6rem;
+      }
+      header>.header-img>.con > p:nth-child(2){
+      font-size: 2rem;
+      line-height: 2rem;
+      }
 
 
 /* article1 start*/
+  .title
+  {
+    margin: 0;
+    margin-top: 5%;
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 1em;
+  }
+    .title::after{
+      content: '';
+      border-bottom: 1px solid black;
+      display: block;
+      width: 10rem;
+      margin: 2rem auto;
+    }
+  .a1 {
+    display: block;
+    width: 80%; height: 40vh;
+    margin : 0 10% 10% 10%;
+    background-color: #fff;
 
-.a1 {}
+    }
+    .a1 > div{
+      width: 50%;
+      height: 100%;
+      float: left;
+      line-height: 2.5rem;
+      background-color: #fff;
+      overflow:hidden;
+    }
+    .a1 > div > p{
+      padding: 5%;
+      padding-top: 10%;
+      text-align: right;
+      letter-spacing: 0.05rem;
+      font-size: 1rem;
+    }
 
-.a1 img {}
+.a1 > div > img {
+  width: 100%; height: 100%;
+  overflow-y: hidden;
+  max-height: 500px;
+}
 
 
 /* article2 start*/
 
-.a2 {}
 
+.a2 {
+  margin: 0;
+  text-align: center;
+}
+.a2 > .title {
+  letter-spacing: 0.8rem;
+}
+.coursesline{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .course {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background: linear-gradient(to bottom, #fcf3c1, #faa0a0);
   border-radius: 50%;
   float: left;
@@ -178,39 +246,64 @@ line-height: 2rem;
   text-align: center;
   margin: 4%;
   display: flex;
-  flex-direction: row;
-  /*  overflow: hidden;*/
+  flex-direction: column;
+    overflow: hidden;
 }
-
+  .course > div{
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #000;
+    width: 100%; height: 50%;
+    line-height: 1rem;
+  }
+  .course > div:nth-child(1){
+   font-size: 1.6rem;
+   line-height: 120px;
+   padding-bottom: 10px;
+  }
+  .course > div:nth-child(2){
+   font-size: 0.9rem;
+  }
 
 /* article3 start */
 
-.article3 {}
-
-figure.image {
-  width: 550px;
+.a3{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.a3 > div{
+  width: 70%;
+  margin: 0 15%;
   height: 350px;
-  overflow: hidden;
+  margin-bottom: 5%;
+}
+.a3 > div > div{
+  width: 50%; height: 350px;
+  float: left;
+  background-color: #fff;
+  overflow : hidden;
+  max-width: 550px;
+}
+.a3 > div:hover{
+  box-shadow: -60px 0px 100px -90px #000000,
+        60px 0px 100px -90px #000000;
 }
 
-figure.image img {}
-
-figure.image:after, figure.image figcaption {}
-
-figure.image figcaption {}
-
-figure.image h3 {}
-
-figure.image p {}
-
-figure.image a {}
-
-figure.image:hover img, figure.image.hover img {}
-
-figure.image:hover:after, figure.image.hover:after {}
-
-figure.image:hover h3, figure.image.hover h3, figure.image:hover p, figure.image.hover p, figure.image:hover i, figure.image.hover i {}
-
+.a3 > div > .right > h3{
+  font-weight: 500;
+  padding-left : 10%;
+  letter-spacing: 0.3rem;
+}
+.a3 > div > .right > p{
+  padding : 5% 5% 10% 10%;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+ .a3 > div > div >image {
+  width: auto; height: 100%; 
+  overflow-y: hidden;
+}
 
 /*----- footer start-----*/
 
@@ -222,31 +315,97 @@ footer {
   font-size: 0.5rem;
   text-align: center;
 }
+footer > span{
+  margin-right: 0.3rem;
+}
 
+
+
+
+
+/*반응형 레이아웃*/
 /* Smartphones ------------------------ */
 
 @media only screen and (max-width: 769px) {
-  header>.header-img {
-    z-index: -1;
-    position: relative;
-    width: 100%;
-    /*  height: 20%;*/
+  header>.header-img>.con > p:nth-child(1){
+    padding-top: 10%;
+  font-size: 2rem;
+  line-height: 3rem;
   }
+  header>.header-img>.con p:nth-child(2){
+  font-size: 1rem;
+  line-height: 1rem;
+  }
+  .a1 > div{
+      width: 100%;
+      height: 100%;
+      line-height: 2.5rem;
+      background-color: #fff;
+      overflow:hidden;
+    }
+  .a1 {
+    margin-bottom: 500px;
+  }
+  .title{
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
+  }
+  .coursesline{
+    margin: 10%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .a3 > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .a3 > div > div{
+    max-height: 550px;
+    width: 100%; height: 100%;
+  }
+
 }
 
 
 /* Tablets ----------------------------- */
 
 @media only screen and (min-width: 770px) and (max-width: 1439px) {
-  header>.header-img {
-    z-index: -1;
-    position: relative;
-    width: 100%;
-    /*  height: 50%;*/
+  header>.header-img>.con > p:nth-child(1){
+  padding-top: 20%;
+  font-size: 5rem;
+  line-height: 5rem;
   }
+  header>.header-img>.con p:nth-child(2){
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  }
+  .title{
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+  }
+  .course{
+    width: 12vw; height: 12vw;
+  }
+  .coursesline{
+    width: 70%;
+    margin: 0 15% 10% 15%;
+  }
+  .a3 > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .a3 > div > div{
+    width: 100%; 
+    height: 500px;
+  }
+
 }
+@media only screen and (min-width: 1440px){
+   header>.header-img>.con > p:nth-child(1){
+  padding-top: 30%;
+  font-size: 5rem;
+  line-height: 5rem;
+  }
 
-
-/* Desktops --------------------------- */
-
-@media only screen and (min-width: 1440px) {}
+}
